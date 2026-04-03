@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RapidReply â Never Miss Another Lead</title>
+  <style>
+    :root {
+      --black: #1d1d1f;
+      --dark: #0a0a0f;
+      --gray: #6e6e73;
+      --light: #f5f5f7;
+      --white: #ffffff;
+      --blue: #0071e3;
+      --blue2: #2997ff;
+      --imessage-blue: #1c8cff;
+      --purple: #a78bfa;
+      --green: #34c759;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+      color: var(--black);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: saturate(180%) blur(24px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+    }
+
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--black);
+    }
+
+    .nav-cta {
+      background: var(--blue);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 980px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: #0077f0;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 24px 60px;
+      background: linear-gradient(180deg, var(--light) 0%, var(--white) 100%);
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--blue);
+      background: rgba(0, 113, 227, 0.08);
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      color: var(--black);
+      margin-bottom: 22px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--blue);
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--gray);
+      max-width: 560px;
+      margin: 0 auto 30px;
+      line-height: 1.65;
+    }
+
+    /* HERO PHONE CTA */
+    .hero-phone {
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .hero-phone a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 980px;
+      background: rgba(0, 113, 227, 0.06);
+      transition: all 0.2s;
+    }
+
+    .hero-phone a:hover {
+      background: rgba(0, 113, 227, 0.12);
+    }
+
+    .hero-cta-text {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+
+    /* CONSENT */
+    .hero-consent {
+      max-width: 500px;
+      margin: 0 auto 24px;
+      background: rgba(0, 113, 227, 0.03);
+      border: 1px solid rgba(0, 113, 227, 0.08);
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-size: 0.75rem;
+      color: var(--gray);
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .consent-headline {
+      display: block;
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    /* HERO CTAs */
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 980px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 2px 20px rgba(0, 113, 227, 0.3);
+      transition: all 0.2s;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #0077f0;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(0, 113, 227, 0.4);
+    }
+
+    .btn-outline {
+      color: var(--blue);
+      padding: 14px 30px;
+      border-radius: 980px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid rgba(0, 113, 227, 0.35);
+      display: inline-block;
+      transition: all 0.2s;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      background: rgba(0, 113, 227, 0.05);
+      border-color: var(--blue);
+    }
+
+    /* HERO SPEED NOTE */
+    .hero-speed {
+      font-size: 0.82rem;
+      color: var(--gray);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* WORKFLOW STRIP */
+    .workflow-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      background: var(--white);
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      border-radius: 20px;
+      padding: 28px 40px;
+      max-width: 720px;
+      margin: 0 auto;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .wf-step {
+      text-align: center;
+    }
+
+    .wf-icon {
+      font-size: 2.2rem;
+      margin-bottom: 6px;
+    }
+
+    .wf-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .wf-label span {
+      display: block;
+      font-weight: 400;
+      color: var(--gray);
+      font-size: 0.75rem;
+    }
+
+    .wf-arrow {
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    /* SECTION LABELS */
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--black);
+      margin-bottom: 14px;
+      line-height: 1.1;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray);
+      max-width: 560px;
+      margin: 0 auto 48px;
+      line-height: 1.65;
+    }
+
+    /* OPT-IN SECTION */
+    .optin-section {
+      background: var(--white);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .optin-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .optin-step {
+      background: var(--light);
+      border-radius: 20px;
+      padding: 36px 28px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .optin-step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .optin-step h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .optin-step p {
+      font-size: 0.88rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* INTERACTIVE DEMO SECTION */
+    .demo-section {
+      background: var(--light);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .demo-container {
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .iphone-frame {
+      background: #000;
+      border-radius: 40px;
+      padding: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      position: relative;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    .iphone-frame::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 28px;
+      background: #000;
+      border-radius: 0 0 26px 26px;
+      z-index: 10;
+    }
+
+    .messages-screen {
+      background: #fff;
+      border-radius: 35px;
+      padding: 16px;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .messages-header {
+      padding: 16px 0;
+      border-bottom: 1px solid #e5e5ea;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .messages-list {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-right: 4px;
+    }
+
+    .message {
+      display: flex;
+      margin-bottom: 2px;
+      opacity: 0;
+      animation: slideIn 0.4s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .message.received {
+      justify-content: flex-start;
+    }
+
+    .message.sent {
+      justify-content: flex-end;
+    }
+
+    .message-bubble {
+      max-width: 75%;
+      padding: 10px 14px;
+      border-radius: 18px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      word-wrap: break-word;
+    }
+
+    .message.received .message-bubble {
+      background: #e5e5ea;
+      color: #000;
+      border-radius: 18px 18px 18px 4px;
+    }
+
+    .message.sent .message-bubble {
+      background: var(--imessage-blue);
+      color: #fff;
+      border-radius: 18px 18px 4px 18px;
+    }
+
+    .message-group {
+      margin-bottom: 16px;
+    }
+
+    .message-group.alert-box {
+      background: #f5f5f7;
+      border-radius: 12px;
+      padding: 12px;
+      margin: 16px auto;
+      max-width: 85%;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    .alert-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .alert-content {
+      text-align: left;
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 8px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .demo-controls {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 24px;
+    }
+
+    .btn-demo {
+      padding: 12px 24px;
+      border-radius: 980px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-demo.primary {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(0, 113, 227, 0.3);
+    }
+
+    .btn-demo.primary:hover {
+      background: #0077f0;
+      transform: translateY(-2px);
+    }
+
+    .btn-demo.secondary {
+      background: transparent;
+      color: var(--gray);
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-demo.secondary:hover {
+      color: var(--black);
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /* STATS */
+    .stats-section {
+      background: var(--white);
+      padding: 80px 24px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 900px;
+      margin: 0 auto;
+      gap: 1px;
+      background: #e0e0e5;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .stat-box {
+      background: var(--light);
+      padding: 48px 32px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .stat-num span {
+      color: var(--blue);
+    }
+
+    .stat-desc {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: var(--gray);
+      line-height: 1.55;
+      max-width: 220px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* FEATURES */
+    .features-section {
+      background: var(--white);
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .feat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .feat-card {
+      border-radius: 24px;
+      padding: 38px 30px;
+      text-align: left;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .feat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+    }
+
+    .feat-card.c1 {
+      background: linear-gradient(135deg, #eef6ff 0%, #f5f0ff 100%);
+    }
+
+    .feat-card.c2 {
+      background: linear-gradient(135deg, #f0fff0 0%, #eef6ff 100%);
+    }
+
+    .feat-card.c3 {
+      background: linear-gradient(135deg, #fff8ee 0%, #fff0f0 100%);
+    }
+
+    .feat-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .feat-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--black);
+    }
+
+    .feat-card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .feat-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(0, 113, 227, 0.08);
+      color: var(--blue);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* HOW IT WORKS SECTION */
+    .how-section {
+      background: var(--light);
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .step {
+      text-align: left;
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .step h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+
+    /* TESTIMONIALS SECTION */
+    .testi-section {
+      background: var(--white);
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .testi-card {
+      background: var(--light);
+      border-radius: 24px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .testi-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+    }
+
+    .outcome-icon {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+    }
+
+    .outcome-stat {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+
+    .outcome-desc {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .outcome-source {
+      font-size: 0.75rem;
+      color: #999;
+      font-style: italic;
+    }
+
+    /* PRICING SECTION */
+    .pricing-section {
+      background: var(--white);
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .price-card {
+      background: var(--light);
+      border-radius: 24px;
+      padding: 48px 40px;
+      position: relative;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .price-card.hot {
+      background: linear-gradient(135deg, #0071e3 0%, #2997ff 100%);
+      color: #fff;
+    }
+
+    .hot-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .plan-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .price-card.hot .plan-name {
+      color: #fff;
+    }
+
+    .price-amount {
+      font-size: 3.4rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--black);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .price-card.hot .price-amount {
+      color: #fff;
+    }
+
+    .price-period {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 28px;
+    }
+
+    .price-card.hot .price-period {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .price-features {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .price-features li {
+      font-size: 0.88rem;
+      color: #444;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .price-card.hot .price-features li {
+      color: rgba(255, 255, 255, 0.6);
+      border-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .price-features li::before {
+      content: 'â';
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, #0a0a1a 0%, #12103a 50%, #0d1f3c 100%);
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(41, 151, 255, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.1;
+      position: relative;
+    }
+
+    .cta-section > p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.5);
+      max-width: 440px;
+      margin: 0 auto 38px;
+      line-height: 1.65;
+      position: relative;
+    }
+
+    .cta-form {
+      max-width: 480px;
+      margin: 0 auto;
+      position: relative;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 32px 28px;
+      text-align: left;
+    }
+
+    .cta-form label.field-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 6px;
+      margin-top: 16px;
+    }
+
+    .cta-form input[type="text"],
+    .cta-form input[type="email"],
+    .cta-form input[type="tel"] {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .cta-form input::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .cta-form input:focus {
+      border-color: var(--blue2);
+    }
+
+    .consent-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .consent-row input[type="checkbox"] {
+      margin-top: 3px;
+    }
+
+    .consent-row label {
+      font-size: 0.73rem;
+      color: rgba(255, 255, 255, 0.35);
+      line-height: 1.5;
+    }
+
+    .cta-form button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 14px;
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      border-radius: 980px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .cta-form button:hover {
+      background: #0077f0;
+    }
+
+    .form-success {
+      display: none;
+      color: #fff;
+      font-size: 1rem;
+      margin-top: 16px;
+      padding: 16px;
+      background: rgba(52, 199, 89, 0.2);
+      border-radius: 12px;
+      border: 1px solid rgba(52, 199, 89, 0.3);
+    }
+
+    .form-success.show {
+      display: block;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--light);
+      padding: 48px 24px 32px;
+      text-align: center;
+    }
+
+    .foot-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .foot-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .foot-links a {
+      font-size: 0.82rem;
+      color: var(--gray);
+      text-decoration: none;
+    }
+
+    .foot-links a:hover {
+      color: var(--black);
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+
+    .foot-contact {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .foot-contact a {
+      font-size: 0.82rem;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero-sub {
+        font-size: 1rem;
+      }
+
+      .optin-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow-strip {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .wf-arrow {
+        transform: rotate(90deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">RapidReply</a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
+    <a href="tel:+19172269563" class="nav-cta">Call Us</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <span class="hero-eyebrow">For HVAC & Local Service Businesses</span>
+    <h1>Every missed call is a <em>missed paycheck.</em></h1>
+    <p class="hero-sub">RapidReply runs 3 automated workflows that capture missed calls, route customer replies, and alert you to new leads â all without lifting a finger.</p>
+
+    <div>
+      <div class="hero-phone">
+        <a href="tel:+19172269563">ð +1 (917) 226-9563</a>
+      </div>
+    </div>
+    <p class="hero-cta-text">Call or text us to get started</p>
+
+    <div class="hero-consent">
+      <strong class="consent-headline">Call or text us at (917) 226-9563</strong>
+      <p>By calling this number, you consent to receive an SMS message from RapidReply if we miss your call.</p>
+      <p>Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help.</p>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Book a Free Demo</a>
+      <a href="#how" class="btn-outline">See How It Works</a>
+    </div>
+
+    <p class="hero-speed"><span class="dot"></span> Texts fire automatically in under 60 seconds</p>
+
+    <div class="workflow-strip">
+      <div class="wf-step">
+        <div class="wf-icon">ð²</div>
+        <div class="wf-label">Missed call <span>auto text-back</span></div>
+      </div>
+      <div class="wf-arrow">â</div>
+      <div class="wf-step">
+        <div class="wf-icon">ð</div>
+        <div class="wf-label">Customer replies <span>smart routing</span></div>
+      </div>
+      <div class="wf-arrow">â</div>
+      <div class="wf-step">
+        <div class="wf-icon">ð</div>
+        <div class="wf-label">You get alerted <span>instant SMS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPT-IN SECTION -->
+  <section class="optin-section" id="sms-opt-in">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-title">Simple, automatic, and compliant.</h2>
+    <p class="section-sub">Here's how customers opt in to receive SMS messages from RapidReply.</p>
+
+    <div class="optin-steps">
+      <div class="optin-step">
+        <div class="optin-step-num">1</div>
+        <h3>Customer calls your business</h3>
+        <p>A potential customer dials your business phone number listed on this website. By calling, they initiate contact with your business.</p>
+      </div>
+      <div class="optin-step">
+        <div class="optin-step-num">2</div>
+        <h3>If you miss the call</h3>
+        <p>When you can't answer â because you're on a job, driving, or after hours â the system detects the missed call automatically.</p>
+      </div>
+      <div class="optin-step">
+        <div class="optin-step-num">3</div>
+        <h3>RapidReply automatically sends a text response</h3>
+        <p>Within 60 seconds, the caller receives a text message with service options. They can reply STOP at any time to unsubscribe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DEMO SECTION -->
+  <section class="demo-section" id="example-message">
+    <p class="section-label">Interactive Demo</p>
+    <h2 class="section-title">See it in action.</h2>
+    <p class="section-sub">Watch how the system works in real time â from the customer's perspective and yours.</p>
+
+    <div class="demo-container">
+      <div class="iphone-frame">
+        <div class="messages-screen">
+          <div class="messages-header">RapidReply</div>
+          <div class="messages-list" id="messagesList">
+            <!-- Messages will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </div>
+      <div class="demo-controls">
+        <button class="btn-demo primary" id="startDemoBtn">Watch the Demo</button>
+        <button class="btn-demo secondary" id="replayDemoBtn" style="display:none;">Replay Demo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-num">78<span>%</span></div>
+        <div class="stat-desc">of callers won't leave a voicemail â they call your competitor instead</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">5<span>min</span></div>
+        <div class="stat-desc">average time before a lead goes cold and moves to the next company</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">3<span>Ã</span></div>
+        <div class="stat-desc">more leads captured by businesses that follow up automatically via text</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features-section" id="features">
+    <p class="section-label">What RapidReply Does</p>
+    <h2 class="section-title">Three workflows. One system. Zero leads lost.</h2>
+    <p class="section-sub">Set it up once and RapidReply runs 24/7 â even when you're on the job, at dinner, or asleep.</p>
+
+    <div class="feat-grid">
+      <div class="feat-card c1">
+        <div class="feat-icon">ð²</div>
+        <h3>Missed Call Text-Back</h3>
+        <p>The second you miss a call, RapidReply texts the caller a numbered SMS menu â "Schedule service, Emergency repair, or Get a quote." The lead stays warm and feels taken care of immediately.</p>
+        <span class="feat-tag">Fires in &lt; 60 seconds</span>
+      </div>
+      <div class="feat-card c2">
+        <div class="feat-icon">ð</div>
+        <h3>Smart Reply Routing</h3>
+        <p>When a customer replies with 1, 2, or 3, the system routes them automatically â sends a booking link, asks for their address for urgent dispatch, or builds a quote request. Wrong reply? It re-prompts politely.</p>
+        <span class="feat-tag">No manual sorting needed</span>
+      </div>
+      <div class="feat-card c3">
+        <div class="feat-icon">ð</div>
+        <h3>Instant Owner Alerts</h3>
+        <p>Every time a new missed-call lead comes in, you get a text with their name and number right away. No logging in, no checking dashboards â the hot lead lands straight in your pocket.</p>
+        <span class="feat-tag">Real-time SMS alerts</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section class="how-section" id="how">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-title">Up and running in one day.</h2>
+    <p class="section-sub">Here's exactly what happens every time you miss a call.</p>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>You miss a call</h4>
+        <p>Doesn't matter if you're on a job, at lunch, or asleep. Within 60 seconds, RapidReply fires a text to the caller.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Customer picks from the menu</h4>
+        <p>They reply 1 for scheduling, 2 for emergency, or 3 for a quote. The system routes them instantly â no human needed.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>You get an alert</h4>
+        <p>A text lands in your pocket with the lead's name and number. You decide when to call them back â on your terms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS / OUTCOMES SECTION -->
+  <section class="testi-section">
+    <p class="section-label">What To Expect</p>
+    <h2 class="section-title">What happens when no lead goes unanswered.</h2>
+    <p class="section-sub">Based on SMS industry data and typical results for local service businesses running automated follow-up.</p>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="outcome-icon">ð²</div>
+        <div class="outcome-stat">3â5 extra jobs/month</div>
+        <div class="outcome-desc">The average local service business misses 30â40% of inbound calls. Texting those callers back within 60 seconds recovers a meaningful slice of that â jobs that otherwise go straight to a competitor.</div>
+        <div class="outcome-source">Based on: SMS response rate data &amp; missed call loss estimates for SMBs</div>
+      </div>
+      <div class="testi-card">
+        <div class="outcome-icon">ð</div>
+        <div class="outcome-stat">Instant lead notifications</div>
+        <div class="outcome-desc">Every missed call becomes a real-time alert on your phone. No logging in, no dashboards â just a text with the lead's info so you can respond on your terms, fast.</div>
+        <div class="outcome-source">Based on: Speed-to-lead studies &amp; local service conversion benchmarks</div>
+      </div>
+      <div class="testi-card">
+        <div class="outcome-icon">ð</div>
+        <div class="outcome-stat">Zero leads fall through the cracks</div>
+        <div class="outcome-desc">Smart routing handles scheduling, emergencies, and quote requests automatically. Customers get instant acknowledgment and your team gets organized lead info â no manual sorting required.</div>
+        <div class="outcome-source">Based on: Automated follow-up engagement data for service businesses</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section class="pricing-section" id="pricing">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title">Simple, flat pricing.</h2>
+    <p class="section-sub">No contracts. No setup fees. Cancel anytime.</p>
+
+    <div class="pricing-grid">
+      <div class="price-card hot">
+        <span class="hot-badge">Simple Pricing</span>
+        <p class="plan-name">RapidReply</p>
+        <div class="price-amount">$97</div>
+        <p class="price-period">per month</p>
+        <ul class="price-features">
+          <li>Missed call text-back (auto, &lt;60s)</li>
+          <li>Smart reply routing (1 / 2 / 3)</li>
+          <li>Instant owner SMS alerts</li>
+          <li>1 dedicated business number</li>
+          <li>Up to 500 texts/month</li>
+          <li>Priority support + done-for-you setup</li>
+        </ul>
+        <a href="#contact" class="btn-primary">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section" id="contact">
+    <h2>Ready to stop losing jobs<br>to voicemail?</h2>
+    <p>Book a free 20-minute demo. We'll show you exactly how it works for your business.</p>
+
+    <form class="cta-form" id="contactForm">
+      <label class="field-label" for="name">Your Name</label>
+      <input id="name" type="text" placeholder="John Smith" name="name" required>
+
+      <label class="field-label" for="email">Email Address</label>
+      <input id="email" type="email" placeholder="john@example.com" name="email" required>
+
+      <label class="field-label" for="phone">Phone Number</label>
+      <input id="phone" type="tel" placeholder="+1 (555) 123-4567" name="phone" required>
+
+      <div class="consent-row">
+        <input id="sms_consent" type="checkbox" name="sms_consent" required>
+        <label for="sms_consent">By submitting this form, you consent to receive SMS messages from RapidReply. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help.</label>
+      </div>
+
+      <button type="submit">Book a Free Demo</button>
+      <div class="form-success" id="formSuccess">Thanks! We'll reach out within 24 hours.</div>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-logo">RapidReply</div>
+    <div class="foot-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:rapidreply.team@gmail.com">Contact</a>
+    </div>
+    <p>Â© 2026 RapidReply Â· Missouri City, TX</p>
+    <div class="foot-contact">
+      <a href="mailto:rapidreply.team@gmail.com">rapidreply.team@gmail.com</a>
+      <a href="tel:+19172269563">+1 (917) 226-9563</a>
+    </div>
+  </footer>
+
+  <script>
+    // Interactive SMS Demo
+    const messagesList = document.getElementById('messagesList');
+    const startDemoBtn = document.getElementById('startDemoBtn');
+    const replayDemoBtn = document.getElementById('replayDemoBtn');
+
+    const demoMessages = [
+      {
+        type: 'received',
+        text: 'Sorry we missed your call â we\'re likely on a job right now. But we can still help you ð\n\nReply with the number:\n1 â Schedule service\n2 â Emergency / urgent\n3 â Get a quote\n\nYour request is sent straight to our team and prioritized right away.',
+        delay: 300
+      },
+      {
+        type: 'sent',
+        text: '1',
+        delay: 1200
+      },
+      {
+        type: 'received',
+        text: 'Got it - sending this to our team now.\n\nSomeone will reach out shortly.',
+        delay: 2000
+      },
+      {
+        type: 'alert',
+        text: 'Meanwhile, you get this alert:',
+        delay: 2800
+      },
+      {
+        type: 'owner-alert',
+        text: 'ð New Lead (Schedule)\nPhone: (555) 123-4567\nCustomer is looking to schedule service.\n\nCall or text ASAP â fast response = highest chance to lock this in.',
+        delay: 3400
+      }
+    ];
+
+    function clearMessages() {
+      messagesList.innerHTML = '';
+    }
+
+    function startDemo() {
+      clearMessages();
+      startDemoBtn.style.display = 'none';
+      replayDemoBtn.style.display = 'inline-block';
+
+      demoMessages.forEach((msg, index) => {
+        setTimeout(() => {
+          if (msg.type === 'alert') {
+            const alertBox = document.createElement('div');
+            alertBox.className = 'message-group alert-box';
+            alertBox.style.animation = `slideIn 0.4s ease-out`;
+            alertBox.style.animationDelay = '0s';
+            alertBox.textContent = msg.text;
+            messagesList.appendChild(alertBox);
+            messagesList.scrollTop = messagesList.scrollHeight;
+          } else if (msg.type === 'owner-alert') {
+            const alertBox = document.createElement('div');
+            alertBox.className = 'message-group alert-box';
+            alertBox.style.animation = `slideIn 0.4s ease-out`;
+            alertBox.style.animationDelay = '0s';
+            const lines = msg.text.split('\n');
+            alertBox.innerHTML = `
+              <div class="alert-title">${lines[0]}</div>
+              <div class="alert-content">
+                ${lines.slice(1).join('<br>')}
+              </div>
+            `;
+            messagesList.appendChild(alertBox);
+            messagesList.scrollTop = messagesList.scrollHeight;
+          } else {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${msg.type}`;
+            msgDiv.style.animationDelay = '0s';
+
+            const bubble = document.createElement('div');
+            bubble.className = 'message-bubble';
+            bubble.textContent = msg.text;
+
+            msgDiv.appendChild(bubble);
+            messagesList.appendChild(msgDiv);
+            messagesList.scrollTop = messagesList.scrollHeight;
+          }
+        }, msg.delay);
+      });
+    }
+
+    startDemoBtn.addEventListener('click', startDemo);
+    replayDemoBtn.addEventListener('click', startDemo);
+
+    // Contact Form Handler
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+
+      // Create mailto link with form data
+      const subject = `New Demo Request from ${name}`;
+      const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nThis person has requested a demo of RapidReply.`;
+      const mailtoLink = `mailto:rapidreply.team@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Open email client
+      window.location.href = mailtoLink;
+
+      // Show success message
+      formSuccess.classList.add('show');
+
+      // Reset form
+      contactForm.reset();
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        formSuccess.classList.remove('show');
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
