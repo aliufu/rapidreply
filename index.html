@@ -108,7 +108,327 @@
       padding: 6px 16px;
       border-radius: 20px;
       margin-bottom: 20px;
-    }gap: 8px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      color: var(--black);
+      margin-bottom: 22px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--blue);
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--gray);
+      max-width: 560px;
+      margin: 0 auto 30px;
+      line-height: 1.65;
+    }
+
+    /* HERO PHONE CTA */
+    .hero-phone {
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .hero-phone a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 980px;
+      background: rgba(0, 113, 227, 0.06);
+      transition: all 0.2s;
+    }
+
+    .hero-phone a:hover {
+      background: rgba(0, 113, 227, 0.12);
+    }
+
+    .hero-cta-text {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+
+    /* CONSENT */
+    .hero-consent {
+      max-width: 500px;
+      margin: 0 auto 24px;
+      background: rgba(0, 113, 227, 0.03);
+      border: 1px solid rgba(0, 113, 227, 0.08);
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-size: 0.75rem;
+      color: var(--gray);
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .consent-headline {
+      display: block;
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    /* HERO CTAs */
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 980px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 2px 20px rgba(0, 113, 227, 0.3);
+      transition: all 0.2s;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #0077f0;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(0, 113, 227, 0.4);
+    }
+
+    .btn-outline {
+      color: var(--blue);
+      padding: 14px 30px;
+      border-radius: 980px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid rgba(0, 113, 227, 0.35);
+      display: inline-block;
+      transition: all 0.2s;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      background: rgba(0, 113, 227, 0.05);
+      border-color: var(--blue);
+    }
+
+    /* HERO SPEED NOTE */
+    .hero-speed {
+      font-size: 0.82rem;
+      color: var(--gray);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* WORKFLOW STRIP */
+    .workflow-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      background: var(--white);
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      border-radius: 20px;
+      padding: 28px 40px;
+      max-width: 720px;
+      margin: 0 auto;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .wf-step {
+      text-align: center;
+    }
+
+    .wf-icon {
+      font-size: 2.2rem;
+      margin-bottom: 6px;
+    }
+
+    .wf-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .wf-label span {
+      display: block;
+      font-weight: 400;
+      color: var(--gray);
+      font-size: 0.75rem;
+    }
+
+    .wf-arrow {
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    /* SECTION LABELS */
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--black);
+      margin-bottom: 14px;
+      line-height: 1.1;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray);
+      max-width: 560px;
+      margin: 0 auto 48px;
+      line-height: 1.65;
+    }
+
+    /* OPT-IN SECTION */
+    .optin-section {
+      background: var(--white);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .optin-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .optin-step {
+      background: var(--light);
+      border-radius: 20px;
+      padding: 36px 28px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .optin-step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .optin-step h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .optin-step p {
+      font-size: 0.88rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* INTERACTIVE DEMO SECTION */
+    .demo-section {
+      background: var(--light);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .demo-container {
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .iphone-frame {
+      background: #000;
+      border-radius: 40px;
+      padding: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      position: relative;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    .iphone-frame::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 28px;
+      background: #000;
+      border-radius: 0 0 26px 26px;
+      z-index: 10;
+    }
+
+    .messages-screen {
+      background: #fff;
+      border-radius: 35px;
+      padding: 16px;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .messages-header {
+      padding: 16px 0;
+      border-bottom: 1px solid #e5e5ea;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .messages-list {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
       padding-right: 4px;
     }
 
@@ -273,4 +593,759 @@
       max-width: 220px;
       margin-left: auto;
       margin-right: auto;
-    }sR�RBSRSR�&v&�C�S�#SR����R�G&�7&V�BsR������FW"�WfV�G3����S��Р��7F�6V7F����"��f��B�6��S�6���'&V��B�Wgr�2�W&Vғ��f��B�vV�v�C�s���WGFW"�76��s���FVӰ�6���#�6ffc���&v���&�GF�Ӣg���Ɩ�RֆV�v�C�����6�F���&V�F�fS��Р��7F�6V7F������f��B�6��S��&VӰ�6���#�&v&�#SR�#SR�#SR��R������v�GF��CC����&v��WF�3����Ɩ�RֆV�v�C��cS���6�F���&V�F�fS��Р��7F�f�&������v�GF��C�����&v��WF��6�F���&V�F�fS��&6�w&�V�C�&v&�#SR�#SR�#SR��r���&�&FW#��6�ƖB&v&�#SR�#SR�#SR��"���&�&FW"�&F�W3�#���FF��s�3'�#����FW�B�Ɩv��VgC��Р���d��DU"��f��FW"��&6�w&�V�C�f"���Ɩv�B���FF��s�C��#G�3'���FW�B�Ɩv�6V�FW#��Р��f��B���v���f��B�6��S��&VӰ�f��B�vV�v�C�s��6���#�f"���&�6�����&v���&�GF�Ӣg���Р��f��B�Ɩ�2��F�7���f�W���v�#����W7F�g��6��FV�C�6V�FW#��f�W��w&�w&���&v���&�GF�Ӣ#���Р��f��B�Ɩ�2��f��B�6��S��'&VӰ�6���#�f"���w&����FW�B�FV6�&F������S��Р��f��B�Ɩ�2���fW"��6���#�f"���&�6����Р�f��FW"��f��B�6��S��s�&VӰ�6���#�f"���w&�����&v���&�GF�Ӣ����Р��f��B�6��F7B��F�7���f�W���v�g����W7F�g��6��FV�C�6V�FW#��Р��f��B�6��F7B��f��B�6��S��'&VӰ�6���#�f"���&�VR���FW�B�FV6�&F������S��Р��$U5��4�dR���VF�����v�GF��sc������b��FF��s�#���Р���b�Ɩ�2��F�7������S��Р��W&����f��B�6��S�"�G&VӰ�Р��W&��7V"��f��B�6��S�&VӰ�Р���F���7FW2��w&�B�FV��FR�6��V��3�g#��Р��7FG2�w&�B��w&�B�FV��FR�6��V��3�g#��Р��fVB�w&�B��w&�B�FV��FR�6��V��3�g#��Р��7FW2�w&�B��w&�B�FV��FR�6��V��3�g#��Р��FW7F��w&�B��w&�B�FV��FR�6��V��3�g#��Р��&�6��r�w&�B��w&�B�FV��FR�6��V��3�g#��Р��v�&�f��r�7G&���f�W��F�&V7F���6��V�㰢v�'���Р��vb�'&�r��G&�6f�&Ӣ&�FFR��FVr���ТТ��7G��S����VC��&�G������b�����c���&Vc�"2"6�73�&�b���v�#�&�E&WǓ����V�6�73�&�b�Ɩ�2#��Ɠ���&Vc�"6fVGW&W2#�fVGW&W3�����Ɠ��Ɠ���&Vc�"6��r#��r�Bv�&�3�����Ɠ��Ɠ���&Vc�"7&�6��r#�&�6��s�����Ɠ���V����&Vc�'6�3���s##c�Sc2"6�73�&�b�7F#�FW�BW3������c�vgV�6Ɩ6R�bF�B(	B��'2F�B�F�W'v�6Rv�7G&�v�BF�6��WF�F�"���F�c��F�b6�73�&�WF6��R�6�W&6R#�&6VB��4�2&W7��6R&FRFFf��֗76VB6����72W7F��FW2f�"4�'3��F�c���F�c��F�b6�73�'FW7F��6&B#��F�b6�73�&�WF6��R֖6��#�	�IC��F�c��F�b6�73�&�WF6��R�7FB#��7F�B�VB��F�f�6F���3��F�c��F�b6�73�&�WF6��R�FW62#�WfW'�֗76VB6��&V6��W2&V��F��R�W'B����W"���R�����vv��r�����F6�&�&G2(	B�W7BFW�Bv�F�F�R�VBw2��f�6���R6�&W7��B����W"FW&�2�f7B���F�c��F�b6�73�&�WF6��R�6�W&6R#�&6VB��7VVB�F���VB7GVF�W2f����6�6W'f�6R6��fW'6���&V�6��&�3��F�c���F�c��F�b6�73�'FW7F��6&B#��F�b6�73�&�WF6��R֖6��#�	�H��F�c��F�b6�73�&�WF6��R�7FB#�W&��VG2f��F�&�Vv�F�R7&6�3��F�c��F�b6�73�&�WF6��R�FW62#�6�'B&�WF��r��F�W266�VGVƖ�r�V�W&vV�6�W2��BV�FR&WVW7G2WF��F�6�ǒ�7W7F��W'2vWB��7F�B6���v�VFv�V�B�B��W"FV�vWG2�&v旦VB�VB��f�(	B����V�6�'F��r&WV�&VB���F�c��F�b6�73�&�WF6��R�6�W&6R#�&6VB��WF��FVBf����r�WV�vvV�V�BFFf�"6W'f�6R'W6��W76W3��F�c���F�c���F�c���6V7F���ࠢ���$�4��r4T5D�������6V7F���6�73�'&�6��r�6V7F���"�C�'&�6��r#��6�73�'6V7F�����&V�#�&�6��s���ƃ"6�73�'6V7F����F�F�R#�6���R�f�B&�6��r����#��6�73�'6V7F����7V"#���6��G&7G2���6WGWfVW2�6�6V��F��R���ࠢ�F�b6�73�'&�6��r�w&�B#��F�b6�73�'&�6R�6&B��B#��7�6�73�&��B�&FvR#�6���R&�6��s��7���6�73�'�����R#�&�E&WǓ����F�b6�73�'&�6R���V�B#�C�s��F�c��6�73�'&�6R�W&��B#�W"���F�����V�6�73�'&�6R�fVGW&W2#��Ɠ�֗76VB6��FW�B�&6��WF��f�C�c2���Ɠ��Ɠ�6�'B&Wǒ&�WF��r��"�2���Ɠ��Ɠ��7F�B�v�W"4�2�W'G3��Ɠ��Ɠ�FVF�6FVB'W6��W72�V�&W#��Ɠ��Ɠ�WF�SFW�G2����F���Ɠ��Ɠ�&��&�G�7W�'B�F��R�f�"ז�R6WGW��Ɠ���V����&Vc�'6�3���s##c�Sc2"6�73�&'F��&��'�#�FW�BW2F�vWB7F'FVC�����F�c���F�c���6V7F���ࠢ���5D4T5D�������6V7F���6�73�&7F�6V7F���"�C�&6��F7B#�ƃ#�&VG�F�7F���6��r��'3�'#�F�f��6V�������#���FW�BW2F�vWB7F'FVB(	BvRv��vƲ��RF�&�Vv���r�Bv�&�2f�"��W"'W6��W72������&Vc�'6�3���s##c�Sc2"6�73�&'F��&��'�"7G��S�&f��B�6��S��W&VӲFF��s���C���6�F���&V�F�fS�#�	�*�FW�B��r�##bӓSc3����7G��S�&f��B�6��S��W&VӲ6���#�&v&�#SR�#SR�#SR��3R���&v���F��g���6�F���&V�F�fS�#���7���W7BV�6�6��fW'6F���F�6VR�b&�E&Wǒ�2&�v�Bf�"��R������6V7F���ࠢ���4�2�BԔ�4��Ĕ�4R����6V7F���6�73�&�F���6V7F���"�C�'6�2��B֖�#��6�73�'6V7F�����&V�#��r�Bv�&�3���ƃ"6�73�'6V7F����F�F�R#�6���R�WF��F�2��B6��Ɩ�B����#��6�73�'6V7F����7V"#�W&Rw2��r7W7F��W'2�B��F�&V6V�fR4�2�W76vW2g&��&�E&Wǒ���ࠢ�F�b6�73�&�F���7FW2#��F�b6�73�&�F���7FW#��F�b6�73�&�F���7FW��V�#���F�c�ƃ3�7W7F��W"6��2��W"'W6��W73���3����FV�F��7W7F��W"F��2��W"'W6��W72���R�V�&W"Ɨ7FVB��F��2vV'6�FR�'�6�Ɩ�r�F�W���F�FR6��F7Bv�F���W"'W6��W72������F�c��F�b6�73�&�F���7FW#��F�b6�73�&�F���7FW��V�#�#��F�c�ƃ3�b��R֗72F�R6�����3���v�V���R6�wB�7vW"(	B&V6W6R��Rw&R����"�G&�f��r��"gFW"��W'2(	BF�R7�7FV�FWFV7G2F�R֗76VB6��WF��F�6�ǒ������F�c��F�b6�73�&�F���7FW#��F�b6�73�&�F���7FW��V�#�3��F�c�ƃ3�&�E&WǒWF��F�6�ǒ6V�G2FW�B&W7��6S���3���v�F���c6V6��G2�F�R6��W"&V6V�fW2FW�B�W76vRv�F�6W'f�6R�F���2�F�W�6�&Wǒ5D�B�F��RF�V�7V'67&�&R������F�c���F�cࠢ�F�b6�73�&�W&��6��6V�B"7G��S�&�&v���F��C��#��7G&��r6�73�&6��6V�BֆVFƖ�R#�FW�BW2B��r�##bӓSc3��7G&��s���'�FW�F��rF��2�V�&W"���R6��6V�BF�&V6V�fR�4�2�W76vRg&��&�E&Wǒ�������W76vRg&WVV�7�f&�W2��W76vR�BFF&FW2��ǒ�&Wǒ5D�F�V�7V'67&�&R��T�f�"�V�������F�c���6V7F���ࠢ���d��DU"����f��FW#��F�b6�73�&f��B���v�#�&�E&WǓ��F�c��F�b6�73�&f��B�Ɩ�2#���&Vc�"6fVGW&W2#�fVGW&W3�����&Vc�"6��r#��r�Bv�&�3�����&Vc�"7&�6��r#�&�6��s�����&Vc�'&�f7��F��#�&�f7��Ɩ7������&Vc�'FW&�2�F��#�FW&�2�b6W'f�6S�����&Vc�'6�3���s##c�Sc2#�6��F7C�����F�c���*�##b&�E&Wǒ+r֗76�W&�6�G��E�����F�b6�73�&f��B�6��F7B#���&Vc�&���F�&�G&Wǒ�FV�v����6��#�&�G&Wǒ�FV�v����6�������&Vc�'6�3���s##c�Sc2#���r�##bӓSc3�����F�c���f��FW#ࠢ�67&�C�����FW&7F�fR4�2FV��6��7B�W76vW4Ɨ7B�F�7V�V�B�vWDV�V�V�D'��B�v�W76vW4Ɨ7Br���6��7B7F'DFV��'F��F�7V�V�B�vWDV�V�V�D'��B�w7F'DFV��'F�r���6��7B&W��FV��'F��F�7V�V�B�vWDV�V�V�D'��B�w&W��FV��'F�r����6��7BFV���W76vW2�����G�S�w&V6V�fVBr��FW�C�u6�''�vR֗76VB��W"6��(	BvU�w&RƖ�Vǒ����"&�v�B��r�'WBvR6�7F����V���R	�u����&Wǒv�F�F�R�V�&W#���(	266�VGV�R6W'f�6U��"(	2V�W&vV�7��W&vV�E��2(	2vWBV�FU�����W"&WVW7B�26V�B7G&�v�BF��W"FV��B&��&�F��VB&�v�Bv��r��FV���3 ������G�S�w6V�Br��FW�C�sr��FV���# ������G�S�w&V6V�fVBr��FW�C�tv�B�B�6V�F��rF��2F��W"FV���r�����6��V��Rv���&V6��WB6��'Fǒ�r��FV���# ������G�S�v�W'Br��FW�C�t�V�v���R���RvWBF��2�W'C�r��FV���#� ������G�S�v�v�W"��W'Br��FW�C�	�IB�Wr�VB�66�VGV�R������S��SSR�#2�CScu��7W7F��W"�2������rF�66�VGV�R6W'f�6R�����6���"FW�B4(	Bf7B&W7��6R���v�W7B6��6RF���6�F��2���r��FV���3C �ТӰ��gV�7F���6�V$�W76vW2�����W76vW4Ɨ7B���W$�D���rs��Р�gV�7F���7F'DFV����6�V$�W76vW2����7F'DFV��'F��7G��R�F�7���v���Rs��&W��FV��'F��7G��R�F�7���v��Ɩ�R�&��6�s���FV���W76vW2�f�$V6����6r���FW������6WEF��V�WB��������b��6r�G�R���v�W'Br���6��7B�W'D&���F�7V�V�B�7&VFTV�V�V�B�vF�br����W'D&���6�74��R�v�W76vR�w&�W�W'B�&��s���W'D&���7G��R���F����6ƖFT���G2V6R��WF���W'D&���7G��R���F���FV���s2s���W'D&���FW�D6��FV�B��6r�FW�C���W76vW4Ɨ7B�V�D6���B��W'D&������W76vW4Ɨ7B�67&���F���W76vW4Ɨ7B�67&��ĆV�v�C���V�6R�b��6r�G�R���v�v�W"��W'Br���6��7B�W'D&���F�7V�V�B�7&VFTV�V�V�B�vF�br����W'D&���6�74��R�v�W76vR�w&�W�W'B�&��s���W'D&���7G��R���F����6ƖFT���G2V6R��WF���W'D&���7G��R���F���FV���s2s��6��7BƖ�W2��6r�FW�B�7ƗB�u��r����W'D&�����W$�D��� ��F�b6�73�&�W'B�F�F�R#�G�Ɩ�W5�����F�c��F�b6�73�&�W'B�6��FV�B#�G�Ɩ�W2�6Ɩ6R������s�'#�r�Т��F�c����W76vW4Ɨ7B�V�D6���B��W'D&������W76vW4Ɨ7B�67&���F���W76vW4Ɨ7B�67&��ĆV�v�C���V�6R��6��7B�6tF�b�F�7V�V�B�7&VFTV�V�V�B�vF�br����6tF�b�6�74��R��W76vRG��6r�G�W����6tF�b�7G��R���F���FV���s2s���6��7B'V&&�R�F�7V�V�B�7&VFTV�V�V�B�vF�br���'V&&�R�6�74��R�v�W76vR�'V&&�Rs��'V&&�R�FW�D6��FV�B��6r�FW�C����6tF�b�V�D6���B�'V&&�R����W76vW4Ɨ7B�V�D6���B��6tF�b����W76vW4Ɨ7B�67&���F���W76vW4Ɨ7B�67&��ĆV�v�C��Т���6r�FV�����ғ��Р�7F'DFV��'F��FDWfV�DƗ7FV�W"�v6Ɩ6�r�7F'DFV�򓰢&W��FV��'F��FDWfV�DƗ7FV�W"�v6Ɩ6�r�7F'DFV�򓰠���67&�C���&�G�����F���
+    }
+
+    /* FEATURES */
+    .features-section {
+      background: var(--white);
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .feat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .feat-card {
+      border-radius: 24px;
+      padding: 38px 30px;
+      text-align: left;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .feat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+    }
+
+    .feat-card.c1 {
+      background: linear-gradient(135deg, #eef6ff 0%, #f5f0ff 100%);
+    }
+
+    .feat-card.c2 {
+      background: linear-gradient(135deg, #f0fff0 0%, #eef6ff 100%);
+    }
+
+    .feat-card.c3 {
+      background: linear-gradient(135deg, #fff8ee 0%, #fff0f0 100%);
+    }
+
+    .feat-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .feat-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--black);
+    }
+
+    .feat-card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .feat-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(0, 113, 227, 0.08);
+      color: var(--blue);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* HOW IT WORKS SECTION */
+    .how-section {
+      background: var(--light);
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .step {
+      text-align: left;
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .step h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+
+    /* TESTIMONIALS SECTION */
+    .testi-section {
+      background: var(--white);
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .testi-card {
+      background: var(--light);
+      border-radius: 24px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .testi-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+    }
+
+    .outcome-icon {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+    }
+
+    .outcome-stat {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+
+    .outcome-desc {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .outcome-source {
+      font-size: 0.75rem;
+      color: #999;
+      font-style: italic;
+    }
+
+    /* PRICING SECTION */
+    .pricing-section {
+      background: var(--white);
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .price-card {
+      background: var(--light);
+      border-radius: 24px;
+      padding: 48px 40px;
+      position: relative;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .price-card.hot {
+      background: linear-gradient(135deg, #0071e3 0%, #2997ff 100%);
+      color: #fff;
+    }
+
+    .hot-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .plan-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .price-card.hot .plan-name {
+      color: #fff;
+    }
+
+    .price-amount {
+      font-size: 3.4rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--black);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .price-card.hot .price-amount {
+      color: #fff;
+    }
+
+    .price-period {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 28px;
+    }
+
+    .price-card.hot .price-period {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .price-features {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .price-features li {
+      font-size: 0.88rem;
+      color: #444;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .price-card.hot .price-features li {
+      color: rgba(255, 255, 255, 0.6);
+      border-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .price-features li::before {
+      content: '✓';
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, #0a0a1a 0%, #12103a 50%, #0d1f3c 100%);
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(41, 151, 255, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.1;
+      position: relative;
+    }
+
+    .cta-section > p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.5);
+      max-width: 440px;
+      margin: 0 auto 38px;
+      line-height: 1.65;
+      position: relative;
+    }
+
+    .cta-form {
+      max-width: 480px;
+      margin: 0 auto;
+      position: relative;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 32px 28px;
+      text-align: left;
+    }
+
+
+    /* FOOTER */
+    footer {
+      background: var(--light);
+      padding: 48px 24px 32px;
+      text-align: center;
+    }
+
+    .foot-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .foot-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .foot-links a {
+      font-size: 0.82rem;
+      color: var(--gray);
+      text-decoration: none;
+    }
+
+    .foot-links a:hover {
+      color: var(--black);
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+
+    .foot-contact {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .foot-contact a {
+      font-size: 0.82rem;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero-sub {
+        font-size: 1rem;
+      }
+
+      .optin-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow-strip {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .wf-arrow {
+        transform: rotate(90deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">RapidReply</a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
+    <a href="sms:+19172269563" class="nav-cta">Text Us</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <span class="hero-eyebrow">For HVAC & Local Service Businesses</span>
+    <h1>Every missed call is a <em>missed paycheck.</em></h1>
+    <p class="hero-sub">RapidReply runs 3 automated workflows that capture missed calls, route customer replies, and alert you to new leads — all without lifting a finger.</p>
+
+    <div class="hero-ctas">
+      <a href="sms:+19172269563" class="btn-primary">Text Us to Get Started</a>
+      <a href="#how" class="btn-outline">See How It Works</a>
+    </div>
+
+    <p class="hero-speed"><span class="dot"></span> Texts fire automatically in under 60 seconds</p>
+
+    <div class="workflow-strip">
+      <div class="wf-step">
+        <div class="wf-icon">📲</div>
+        <div class="wf-label">Missed call <span>auto text-back</span></div>
+      </div>
+      <div class="wf-arrow">→</div>
+      <div class="wf-step">
+        <div class="wf-icon">🔀</div>
+        <div class="wf-label">Customer replies <span>smart routing</span></div>
+      </div>
+      <div class="wf-arrow">→</div>
+      <div class="wf-step">
+        <div class="wf-icon">🔔</div>
+        <div class="wf-label">You get alerted <span>instant SMS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DEMO SECTION -->
+  <section class="demo-section" id="example-message">
+    <p class="section-label">Interactive Demo</p>
+    <h2 class="section-title">See it in action.</h2>
+    <p class="section-sub">Watch how the system works in real time — from the customer's perspective and yours.</p>
+
+    <div class="demo-container">
+      <div class="iphone-frame">
+        <div class="messages-screen">
+          <div class="messages-header">RapidReply</div>
+          <div class="messages-list" id="messagesList">
+            <!-- Messages will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </div>
+      <div class="demo-controls">
+        <button class="btn-demo primary" id="startDemoBtn">Watch the Demo</button>
+        <button class="btn-demo secondary" id="replayDemoBtn" style="display:none;">Replay Demo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-num">78<span>%</span></div>
+        <div class="stat-desc">of callers won't leave a voicemail — they call your competitor instead</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">5<span>min</span></div>
+        <div class="stat-desc">average time before a lead goes cold and moves to the next company</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">3<span>×</span></div>
+        <div class="stat-desc">more leads captured by businesses that follow up automatically via text</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features-section" id="features">
+    <p class="section-label">What RapidReply Does</p>
+    <h2 class="section-title">Three workflows. One system. Zero leads lost.</h2>
+    <p class="section-sub">Set it up once and RapidReply runs 24/7 — even when you're on the job, at dinner, or asleep.</p>
+
+    <div class="feat-grid">
+      <div class="feat-card c1">
+        <div class="feat-icon">📲</div>
+        <h3>Missed Call Text-Back</h3>
+        <p>The second you miss a call, RapidReply texts the caller a numbered SMS menu — "Schedule service, Emergency repair, or Get a quote." The lead stays warm and feels taken care of immediately.</p>
+        <span class="feat-tag">Fires in &lt; 60 seconds</span>
+      </div>
+      <div class="feat-card c2">
+        <div class="feat-icon">🔀</div>
+        <h3>Smart Reply Routing</h3>
+        <p>When a customer replies with 1, 2, or 3, the system routes them automatically — sends a booking link, asks for their address for urgent dispatch, or builds a quote request. Wrong reply? It re-prompts politely.</p>
+        <span class="feat-tag">No manual sorting needed</span>
+      </div>
+      <div class="feat-card c3">
+        <div class="feat-icon">🔔</div>
+        <h3>Instant Owner Alerts</h3>
+        <p>Every time a new missed-call lead comes in, you get a text with their name and number right away. No logging in, no checking dashboards — the hot lead lands straight in your pocket.</p>
+        <span class="feat-tag">Real-time SMS alerts</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section class="how-section" id="how">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-title">Up and running in one day.</h2>
+    <p class="section-sub">Here's exactly what happens every time you miss a call.</p>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>You miss a call</h4>
+        <p>Doesn't matter if you're on a job, at lunch, or asleep. Within 60 seconds, RapidReply fires a text to the caller.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Customer picks from the menu</h4>
+        <p>They reply 1 for scheduling, 2 for emergency, or 3 for a quote. The system routes them instantly — no human needed.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>You get an alert</h4>
+        <p>A text lands in your pocket with the lead's name and number. You decide when to call them back — on your terms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS / OUTCOMES SECTION -->
+  <section class="testi-section">
+    <p class="section-label">What To Expect</p>
+    <h2 class="section-title">What happens when no lead goes unanswered.</h2>
+    <p class="section-sub">Based on SMS industry data and typical results for local service businesses running automated follow-up.</p>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="outcome-icon">📲</div>
+        <div class="outcome-stat">3–5 extra jobs/month</div>
+        <div class="outcome-desc">The average local service business misses 30–40% of inbound calls. Texting those callers back within 60 seconds recovers a meaningful slice of that — jobs that otherwise go straight to a competitor.</div>
+        <div class="outcome-source">Based on: SMS response rate data &amp; missed call loss estimates for SMBs</div>
+      </div>
+      <div class="testi-card">
+        <div class="outcome-icon">🔔</div>
+        <div class="outcome-stat">Instant lead notifications</div>
+        <div class="outcome-desc">Every missed call becomes a real-time alert on your phone. No logging in, no dashboards — just a text with the lead's info so you can respond on your terms, fast.</div>
+        <div class="outcome-source">Based on: Speed-to-lead studies &amp; local service conversion benchmarks</div>
+      </div>
+      <div class="testi-card">
+        <div class="outcome-icon">🔀</div>
+        <div class="outcome-stat">Zero leads fall through the cracks</div>
+        <div class="outcome-desc">Smart routing handles scheduling, emergencies, and quote requests automatically. Customers get instant acknowledgment and your team gets organized lead info — no manual sorting required.</div>
+        <div class="outcome-source">Based on: Automated follow-up engagement data for service businesses</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section class="pricing-section" id="pricing">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title">Simple, flat pricing.</h2>
+    <p class="section-sub">No contracts. No setup fees. Cancel anytime.</p>
+
+    <div class="pricing-grid">
+      <div class="price-card hot">
+        <span class="hot-badge">Simple Pricing</span>
+        <p class="plan-name">RapidReply</p>
+        <div class="price-amount">$97</div>
+        <p class="price-period">per month</p>
+        <ul class="price-features">
+          <li>Missed call text-back (auto, &lt;60s)</li>
+          <li>Smart reply routing (1 / 2 / 3)</li>
+          <li>Instant owner SMS alerts</li>
+          <li>1 dedicated business number</li>
+          <li>Up to 500 texts/month</li>
+          <li>Priority support + done-for-you setup</li>
+        </ul>
+        <a href="sms:+19172269563" class="btn-primary">Text Us to Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section" id="contact">
+    <h2>Ready to stop losing jobs<br>to voicemail?</h2>
+    <p>Text us to get started — we'll walk you through how it works for your business.</p>
+    <a href="sms:+19172269563" class="btn-primary" style="font-size:1.15rem; padding:18px 40px; position:relative;">💬 Text (917) 226-9563</a>
+    <p style="font-size:0.85rem; color:rgba(255,255,255,0.35); margin-top:16px; position:relative;">No spam. Just a quick conversation to see if RapidReply is right for you.</p>
+  </section>
+
+  <!-- SMS OPT-IN COMPLIANCE -->
+  <section class="optin-section" id="sms-opt-in">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-title">Simple, automatic, and compliant.</h2>
+    <p class="section-sub">Here's how customers opt in to receive SMS messages from RapidReply.</p>
+
+    <div class="optin-steps">
+      <div class="optin-step">
+        <div class="optin-step-num">1</div>
+        <h3>Customer calls your business</h3>
+        <p>A potential customer dials your business phone number listed on this website. By calling, they initiate contact with your business.</p>
+      </div>
+      <div class="optin-step">
+        <div class="optin-step-num">2</div>
+        <h3>If you miss the call</h3>
+        <p>When you can't answer — because you're on a job, driving, or after hours — the system detects the missed call automatically.</p>
+      </div>
+      <div class="optin-step">
+        <div class="optin-step-num">3</div>
+        <h3>RapidReply automatically sends a text response</h3>
+        <p>Within 60 seconds, the caller receives a text message with service options. They can reply STOP at any time to unsubscribe.</p>
+      </div>
+    </div>
+
+    <div class="hero-consent" style="margin-top: 40px;">
+      <strong class="consent-headline">Text us at (917) 226-9563</strong>
+      <p>By texting this number, you consent to receive an SMS message from RapidReply.</p>
+      <p>Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-logo">RapidReply</div>
+    <div class="foot-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="sms:+19172269563">Contact</a>
+    </div>
+    <p>© 2026 RapidReply · Missouri City, TX</p>
+    <div class="foot-contact">
+      <a href="mailto:rapidreply.team@gmail.com">rapidreply.team@gmail.com</a>
+      <a href="sms:+19172269563">+1 (917) 226-9563</a>
+    </div>
+  </footer>
+
+  <script>
+    // Interactive SMS Demo
+    const messagesList = document.getElementById('messagesList');
+    const startDemoBtn = document.getElementById('startDemoBtn');
+    const replayDemoBtn = document.getElementById('replayDemoBtn');
+
+    const demoMessages = [
+      {
+        type: 'received',
+        text: 'Sorry we missed your call — we\'re likely on a job right now. But we can still help you 👇\n\nReply with the number:\n1 – Schedule service\n2 – Emergency / urgent\n3 – Get a quote\n\nYour request is sent straight to our team and prioritized right away.',
+        delay: 300
+      },
+      {
+        type: 'sent',
+        text: '1',
+        delay: 1200
+      },
+      {
+        type: 'received',
+        text: 'Got it - sending this to our team now.\n\nSomeone will reach out shortly.',
+        delay: 2000
+      },
+      {
+        type: 'alert',
+        text: 'Meanwhile, you get this alert:',
+        delay: 2800
+      },
+      {
+        type: 'owner-alert',
+        text: '🔔 New Lead (Schedule)\nPhone: (555) 123-4567\nCustomer is looking to schedule service.\n\nCall or text ASAP — fast response = highest chance to lock this in.',
+        delay: 3400
+      }
+    ];
+
+    function clearMessages() {
+      messagesList.innerHTML = '';
+    }
+
+    function startDemo() {
+      clearMessages();
+      startDemoBtn.style.display = 'none';
+      replayDemoBtn.style.display = 'inline-block';
+
+      demoMessages.forEach((msg, index) => {
+        setTimeout(() => {
+          if (msg.type === 'alert') {
+            const alertBox = document.createElement('div');
+            alertBox.className = 'message-group alert-box';
+            alertBox.style.animation = `slideIn 0.4s ease-out`;
+            alertBox.style.animationDelay = '0s';
+            alertBox.textContent = msg.text;
+            messagesList.appendChild(alertBox);
+            messagesList.scrollTop = messagesList.scrollHeight;
+          } else if (msg.type === 'owner-alert') {
+            const alertBox = document.createElement('div');
+            alertBox.className = 'message-group alert-box';
+            alertBox.style.animation = `slideIn 0.4s ease-out`;
+            alertBox.style.animationDelay = '0s';
+            const lines = msg.text.split('\n');
+            alertBox.innerHTML = `
+              <div class="alert-title">${lines[0]}</div>
+              <div class="alert-content">
+                ${lines.slice(1).join('<br>')}
+              </div>
+            `;
+            messagesList.appendChild(alertBox);
+            messagesList.scrollTop = messagesList.scrollHeight;
+          } else {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${msg.type}`;
+            msgDiv.style.animationDelay = '0s';
+
+            const bubble = document.createElement('div');
+            bubble.className = 'message-bubble';
+            bubble.textContent = msg.text;
+
+            msgDiv.appendChild(bubble);
+            messagesList.appendChild(msgDiv);
+            messagesList.scrollTop = messagesList.scrollHeight;
+          }
+        }, msg.delay);
+      });
+    }
+
+    startDemoBtn.addEventListener('click', startDemo);
+    replayDemoBtn.addEventListener('click', startDemo);
+
+  </script>
+</body>
+</html>
